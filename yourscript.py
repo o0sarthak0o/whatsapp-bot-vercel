@@ -3,9 +3,6 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
-# Dictionary to store user expenses
-user_expenses = {}
-
 @app.route('/whatsapp', methods=['POST'])
 def whatsapp():
     incoming_msg = request.values.get('Body', '').strip()
